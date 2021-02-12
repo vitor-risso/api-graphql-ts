@@ -19,7 +19,7 @@ class VideoResolver {
   
   @Query(() => [Video])
   async videos(){ 
-    const videos = await VideoSchema.find()
+    const videos = await VideoSchema.find({}, 'name description  category')
     return videos
   }
   
